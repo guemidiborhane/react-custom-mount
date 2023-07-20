@@ -13,15 +13,12 @@ npm install --save react-custom-mount
 ## Usage
 
 ```tsx
-import {
-  registerCustomElement,
-  Components
-} from 'guemidiborhane/react-custom-mount'
+import { registerCustomElement, Components } from 'react-custom-mount'
+
+const ComponentOne = ({ myAttribute }) => <p>Hello {myAttribute}</p>
 
 const components: Components = {
-  'component-one': ComponentOne,
-  'component-two': ComponentTwo,
-  'component-three': ComponentThree
+  'component-one': ComponentOne
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -29,6 +26,10 @@ document.addEventListener('DOMContentLoaded', function () {
     registerCustomElement(component, tag)
   })
 })
+```
+
+```html
+<component-one my-attribute="hello"></component-one>
 ```
 
 ## License
