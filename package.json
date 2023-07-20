@@ -1,6 +1,6 @@
 {
   "name": "react-custom-mount",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Mount react components using custom elements ",
   "author": "guemidiborhane",
   "license": "MIT",
