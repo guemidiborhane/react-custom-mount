@@ -15,7 +15,14 @@ npm install --save react-custom-mount
 ```tsx
 import { registerCustomElement, Components } from 'react-custom-mount'
 
-const ComponentOne = ({ myAttribute }) => <p>Hello {myAttribute}</p>
+const ComponentOne = ({ myAttribute, children }) => {
+    return (
+        <>
+            <p>Hello {myAttribute}</p>
+            {children}
+        </>
+    )
+}
 
 const components: Components = {
     'component-one': ComponentOne
@@ -29,7 +36,11 @@ document.addEventListener('DOMContentLoaded', function () {
 ```
 
 ```html
-<component-one my-attribute="hello"></component-one>
+<component-one my-attribute="hello">
+    <div>
+        <p>From the other side</p>
+    </div>
+</component-one>
 ```
 
 ## License
