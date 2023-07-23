@@ -1,8 +1,8 @@
 {
     "name": "react-custom-mount",
     "version": "1.1.0",
-    "description": "Mount react components using custom elements ",
-    "author": "guemidiborhane",
+    "description": "Mount react components using custom elements",
+    "author": "Borhaneddine GUEMIDI <guemidiborhane@gmail.com>, Sofiane DEBBAGH <sodebbagh@yahoo.com>",
     "license": "MIT",
     "repository": "guemidiborhane/react-custom-mount",
     "main": "dist/index.js",
