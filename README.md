@@ -18,13 +18,13 @@ import { registerCustomElement, Components } from 'react-custom-mount'
 const ComponentOne = ({ myAttribute }) => <p>Hello {myAttribute}</p>
 
 const components: Components = {
-  'component-one': ComponentOne
+    'component-one': ComponentOne
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  Object.entries(components).forEach(([tag, component]) => {
-    registerCustomElement(component, tag)
-  })
+    Object.entries(components).forEach(([tag, component]) => {
+        registerCustomElement(component, tag)
+    })
 })
 ```
 
@@ -34,4 +34,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ## License
 
-MIT © [guemidiborhane](https://github.com/guemidiborhane)
+MIT © [Borhaneddine GUEMIDI](https://github.com/guemidiborhane), [Sofiane DEBBAGH](https://github.com/Redight)
