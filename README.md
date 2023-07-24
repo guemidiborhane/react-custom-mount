@@ -13,7 +13,11 @@ npm install --save react-custom-mount
 ## Usage
 
 ```tsx
-import { registerCustomElement, Components } from 'react-custom-mount'
+import {
+    registerCustomElement,
+    registerCustomElements,
+    Components
+} from 'react-custom-mount'
 
 const ComponentOne = ({ myAttribute, children }) => {
     return (
@@ -29,9 +33,11 @@ const components: Components = {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    Object.entries(components).forEach(([tag, component]) => {
-        registerCustomElement(component, tag)
-    })
+    // Register multiple components
+    registerCustomElements(componenets)
+
+    // Or one
+    registerCustomElement('component-one', ComponentOne)
 })
 ```
 

@@ -1,5 +1,6 @@
 import React, { StrictMode, createElement } from 'react'
-import { CustomElementInterface } from './types'
+import { CustomElementInterface, Components } from './types'
+import { registerCustomElement } from './custom_element'
 
 export function camelCase(str: string) {
     return str.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase())
@@ -117,11 +118,8 @@ export const parseValue = function (value: string) {
     }
 }
 
-export function createContainer(tagName: string) {
-    const container = document.createElement('div')
-    container.setAttribute(
-        'id',
-        `${tagName}-${Math.floor(Math.random() * 100000)}`
-    )
-    return container
+export const registerCustomElements = (components: Components) => {
+    Object.entries(components).forEach(([tag, component]) => {
+        registerCustomElement(component, tag)
+    })
 }
